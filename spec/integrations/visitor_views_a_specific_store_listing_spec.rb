@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.feature 'A visitor can view a specific store search result' do
   context 'valid' do
     scenario 'They have searched for a set of results', :vcr do
-      visit '/zip?80202'
+      visit '/search?zip=80202'
       click_on 'Best Buy Mobile - Cherry Creek Shopping Center'
 
       expect(current_path).to eq '/stores/1'

@@ -26,5 +26,6 @@ RSpec.describe Search, type: :model do
     expect(store.distance).to eq 3.25
     expect(store.phone).to eq "303-270-9189"
     expect(store.type).to eq "Mobile"
+    expect(store.id).to eq 2740
   end
 end
