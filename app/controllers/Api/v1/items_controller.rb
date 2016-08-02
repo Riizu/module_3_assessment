@@ -7,11 +7,13 @@ class Api::V1::ItemsController < ApiBaseController
     render json: Item.find(params[:id])
   end
 
-  def create
-
+  def destroy
+    item = Item.find(params[:id])
+    item.delete
+    render json: item, status: 204
   end
 
-  def destroy
+  def create
 
   end
 end
