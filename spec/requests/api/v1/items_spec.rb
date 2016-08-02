@@ -33,8 +33,8 @@ describe "Items Endpoint" do
     expect(parsed_item["name"]).to eq expected_item.name
     expect(parsed_item["description"]).to eq expected_item.description
     expect(parsed_item["image_url"]).to eq expected_item.image_url
-    expect(parsed_item["created_at"]).to eq expected_item.created_at
-    expect(parsed_item["updated_at"]).to eq expected_item.updated_at
+    expect(parsed_item["created_at"]).to eq expected_item.created_at.to_s
+    expect(parsed_item["updated_at"]).to eq expected_item.updated_at.to_s
   end
 
   it "should delete an item" do

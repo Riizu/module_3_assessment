@@ -4,7 +4,7 @@ class Api::V1::ItemsController < ApiBaseController
   end
 
   def show
-
+    render json: Item.find(params[:id])
   end
 
   def create
