@@ -15,6 +15,16 @@ class SearchService
     parse(response.body)
   end
 
+  def find_store(id)
+    response = connection.get("https://api.bestbuy.com/v1/stores(storeId=#{id})") do |conn|
+      conn.params["show"] = "longName,storeType,address,region,postalCode,city,hoursAmPm,storeId"
+      conn.params["pageSize"] = "1"
+    end
+
+    parse(response.body)
+  end
+
+
   private
 
   def parse(body)

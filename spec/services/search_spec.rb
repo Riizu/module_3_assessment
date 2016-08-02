@@ -33,4 +33,20 @@ RSpec.describe SearchService, :vcr do
     expect(first_store["storeType"]).to eq "Mobile"
     expect(first_store["storeId"]).to eq 2740
   end
+
+  it "searches for a by id" do
+    ss = SearchService.new
+
+    result = ss.find_store(2740)
+    store = result["stores"].first
+
+    expect(first_store["longName"]).to eq "Best Buy Mobile - Cherry Creek Shopping Center"
+    expect(first_store["city"]).to eq "Denver"
+    expect(first_store["region"]).to eq "CO"
+    expect(first_store["postalCode"]).to eq "80206"
+    expect(first_store["storeType"]).to eq "Mobile"
+    expect(first_store["address"]).to eq "3000 East First Ave"
+    expect(first_store["storeId"]).to eq 2740
+    expect(first_store["hoursAmPm"]).to eq "Mon: 10am-9pm; Tue: 10am-9pm; Wed: 10am-9pm; Thurs: 10am-9pm; Fri: 10am-9pm; Sat: 10am-9pm; Sun: 11am-6pm"
+  end
 end

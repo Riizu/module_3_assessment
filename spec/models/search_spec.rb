@@ -28,4 +28,19 @@ RSpec.describe Search, type: :model do
     expect(store.type).to eq "Mobile"
     expect(store.id).to eq 2740
   end
+
+  it "searches for a specific store by id", :vcr do
+    search = Search.new
+
+    result = search.find_store(2740)
+    store = result["stores"][0]
+
+    expect(store.long_name).to eq "Best Buy Mobile - Cherry Creek Shopping Center"
+    expect(store.type).to eq "Mobile"
+    expect(store.hours).to eq ["Mon: 10am-9pm", "Tue: 10am-9pm",
+                               "Wed: 10am-9pm", "Thurs: 10am-9pm",
+                               "Fri: 10am-9pm", "Sat: 10am-9pm",
+                               "Sun: 11am-6pm"]
+    expect(store.address).to eq "3000 East First Ave, Denver, CO 80206"
+  end
 end
