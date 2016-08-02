@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.bestbuy.com/v1/stores(area(80202,25))?apiKey=ru99w3xp6qu5848qvbgrznxq&format=json&pageSize=15&show=longName,city,distance,phone,storeType
+    uri: https://api.bestbuy.com/v1/stores(area(80202,25))?apiKey=ru99w3xp6qu5848qvbgrznxq&format=json&pageSize=15&show=longName,city,distance,phone,storeType,storeId
     body:
       encoding: US-ASCII
       string: ''
@@ -21,13 +21,13 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Tue, 02 Aug 2016 17:03:10 GMT
+      - Tue, 02 Aug 2016 17:32:49 GMT
       Server:
       - thin 1.6.1 codename Death Proof
       X-Mashery-Responder:
-      - prod-j-worker-us-east-1d-104.mashery.com
+      - prod-j-worker-us-east-1e-123.mashery.com
       Content-Length:
-      - '2917'
+      - '3263'
       Connection:
       - keep-alive
     body:
@@ -42,116 +42,131 @@ http_interactions:
           "queryTime": "0.005",
           "totalTime": "0.016",
           "partial": false,
-          "canonicalUrl": "/v1/stores(area(\"80202\",25))?show=longName,city,distance,phone,storeType&format=json&apiKey=ru99w3xp6qu5848qvbgrznxq",
+          "canonicalUrl": "/v1/stores(area(\"80202\",25))?show=longName,city,distance,phone,storeType,storeId&format=json&apiKey=ru99w3xp6qu5848qvbgrznxq",
           "stores": [
             {
               "longName": "Best Buy Mobile - Cherry Creek Shopping Center",
               "city": "Denver",
               "distance": 3.25,
               "phone": "303-270-9189",
-              "storeType": "Mobile"
+              "storeType": "Mobile",
+              "storeId": 2740
             },
             {
               "longName": "Best Buy - Belmar",
               "city": "Lakewood",
               "distance": 5.28,
               "phone": "303-742-8039",
-              "storeType": "BigBox"
+              "storeType": "BigBox",
+              "storeId": 1224
             },
             {
               "longName": "Best Buy - Colorado Blvd",
               "city": "Denver",
               "distance": 5.61,
               "phone": "303-758-5805",
-              "storeType": "BigBox"
+              "storeType": "BigBox",
+              "storeId": 211
             },
             {
               "longName": "Best Buy - Denver West",
               "city": "Lakewood",
               "distance": 8.38,
               "phone": "303-273-5617",
-              "storeType": "BigBox"
+              "storeType": "BigBox",
+              "storeId": 382
             },
             {
               "longName": "Best Buy - Westminster",
               "city": "Westminster",
               "distance": 8.54,
               "phone": "303-426-4434",
-              "storeType": "BigBox"
+              "storeType": "BigBox",
+              "storeId": 209
             },
             {
               "longName": "Best Buy Mobile - Colorado Mills",
               "city": "Lakewood",
               "distance": 8.59,
               "phone": "303-278-0601",
-              "storeType": "Mobile"
+              "storeType": "Mobile",
+              "storeId": 2737
             },
             {
               "longName": "Best Buy - Northglenn",
               "city": "Denver",
               "distance": 9.12,
               "phone": "303-252-8677",
-              "storeType": "BigBox"
+              "storeType": "BigBox",
+              "storeId": 1416
             },
             {
               "longName": "Best Buy Mobile - Town Center at Aurora",
               "city": "Aurora",
               "distance": 9.66,
               "phone": "303-326-0848",
-              "storeType": "Mobile"
+              "storeType": "Mobile",
+              "storeId": 2730
             },
             {
               "longName": "Best Buy - Aurora",
               "city": "Aurora",
               "distance": 9.83,
               "phone": "303-338-5797",
-              "storeType": "BigBox"
+              "storeType": "BigBox",
+              "storeId": 217
             },
             {
               "longName": "Best Buy - Littleton",
               "city": "Littleton",
               "distance": 10.45,
               "phone": "303-932-7830",
-              "storeType": "BigBox"
+              "storeType": "BigBox",
+              "storeId": 210
             },
             {
               "longName": "Best Buy - Southglenn",
               "city": "Centennial",
               "distance": 11.0,
               "phone": "303-797-3246",
-              "storeType": "BigBox"
+              "storeType": "BigBox",
+              "storeId": 1171
             },
             {
               "longName": "Best Buy - I70 & Tower Rd",
               "city": "Aurora",
               "distance": 11.73,
               "phone": "303-373-9284",
-              "storeType": "BigBox"
+              "storeType": "BigBox",
+              "storeId": 1134
             },
             {
               "longName": "Best Buy Mobile - Flatiron Crossing Mall ",
               "city": "Broomfield",
               "distance": 14.44,
               "phone": "303-466-8624",
-              "storeType": "Mobile"
+              "storeType": "Mobile",
+              "storeId": 2953
             },
             {
               "longName": "Best Buy - S.E. Denver",
               "city": "Lone Tree",
               "distance": 14.98,
               "phone": "303-649-9474",
-              "storeType": "BigBox"
+              "storeType": "BigBox",
+              "storeId": 164
             },
             {
               "longName": "Best Buy - S.E. Aurora",
               "city": "Aurora",
               "distance": 18.51,
               "phone": "303-693-0166",
-              "storeType": "BigBox"
+              "storeType": "BigBox",
+              "storeId": 694
             }
           ],
           "warnings": "Distances are in terms of miles (default)"
         }
     http_version: 
-  recorded_at: Tue, 02 Aug 2016 17:03:10 GMT
+  recorded_at: Tue, 02 Aug 2016 17:32:49 GMT
 recorded_with: VCR 3.0.3

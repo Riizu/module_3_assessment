@@ -8,7 +8,7 @@ class SearchService
 
   def find_stores(zip)
     response = connection.get("v1/stores(area(#{zip},25))") do |conn|
-      conn.params["show"] = "longName,city,distance,phone,storeType"
+      conn.params["show"] = "longName,city,distance,phone,storeType,storeId"
       conn.params["pageSize"] = "15"
     end
 
