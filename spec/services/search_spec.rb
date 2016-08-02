@@ -37,8 +37,7 @@ RSpec.describe SearchService, :vcr do
   it "searches for a by id" do
     ss = SearchService.new
 
-    result = ss.find_store(2740)
-    store = result["stores"].first
+    store = ss.find_store(2740)
 
     expect(store["longName"]).to eq "Best Buy Mobile - Cherry Creek Shopping Center"
     expect(store["city"]).to eq "Denver"

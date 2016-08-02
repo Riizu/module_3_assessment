@@ -21,7 +21,7 @@ class SearchService
       conn.params["pageSize"] = "1"
     end
 
-    parse(response.body)
+    parse(response.body)["stores"].first
   end
 
 
