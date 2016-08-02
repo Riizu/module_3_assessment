@@ -14,6 +14,13 @@ class Api::V1::ItemsController < ApiBaseController
   end
 
   def create
+    item = Item.create(item_params)
+    render json: item, status: 201
+  end
 
+  private
+
+  def item_params
+    params.permit(:name, :description, :image_url)
   end
 end
