@@ -14,6 +14,7 @@ gem "less-rails-bootstrap"
 gem "minitest-rails"
 gem "faraday"
 gem "figaro"
+gem "active_model_serializers"
 
 group :development do
   gem "spring"
@@ -25,7 +26,7 @@ group :development, :test do
   gem "rspec-rails"
   gem "vcr"
   gem "byebug"
-  gem "factory_girl"
+  gem "factory_girl_rails"
   gem "capybara"
   gem "webmock"
   gem "simplecov"
