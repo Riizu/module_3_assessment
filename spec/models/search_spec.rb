@@ -32,8 +32,7 @@ RSpec.describe Search, type: :model do
   it "searches for a specific store by id", :vcr do
     search = Search.new
 
-    result = search.find_store(2740)
-    store = result["stores"][0]
+    store = search.find_store(2740)
 
     expect(store.long_name).to eq "Best Buy Mobile - Cherry Creek Shopping Center"
     expect(store.type).to eq "Mobile"
