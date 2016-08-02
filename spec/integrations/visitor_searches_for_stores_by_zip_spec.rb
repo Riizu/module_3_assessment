@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.feature 'A visitor can search for stores by zip' do
   context 'valid' do
-    scenario 'They visit the homepage and enter a zip code' do
+    scenario 'They visit the homepage and enter a zip code', :vcr do
       visit '/'
       fill_in 'zip', with: '80202'
       click_on 'search'
