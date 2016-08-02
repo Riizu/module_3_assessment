@@ -21,11 +21,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Tue, 02 Aug 2016 17:02:06 GMT
+      - Tue, 02 Aug 2016 17:02:07 GMT
       Server:
       - thin 1.6.1 codename Death Proof
       X-Mashery-Responder:
-      - prod-j-worker-us-east-1e-126.mashery.com
+      - prod-j-worker-us-east-1d-107.mashery.com
       Content-Length:
       - '2917'
       Connection:
