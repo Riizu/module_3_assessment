@@ -10,7 +10,7 @@ class Api::V1::ItemsController < ApiBaseController
   def destroy
     item = Item.find(params[:id])
     item.delete
-    render json: item, status: 204
+    render json: '', status: 204
   end
 
   def create
