@@ -1,5 +1,23 @@
 class SearchService
-  def self.find_stores(zip)
-    
+  attr_reader :connection
+  def initialize
+    @connection = Faraday.new("https://api.bestbuy.com/")
+    @connection.params["apiKey"] = ENV["BEST_BUY"]
+    @connection.params["format"] = "json"
+  end
+
+  def find_stores(zip)
+    response = connection.get("v1/stores(area(#{zip},25))") do |conn|
+      conn.params["show"] = "longName,city,distance,phone,storeType"
+      conn.params["pageSize"] = "15"
+    end
+
+    parse(response.body)
+  end
+
+  private
+
+  def parse(body)
+    JSON.parse(body)
   end
 end
