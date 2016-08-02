@@ -16,8 +16,8 @@ describe "Items Endpoint" do
     expect(single_item["name"]).to eq expected_item.name
     expect(single_item["description"]).to eq expected_item.description
     expect(single_item["image_url"]).to eq expected_item.image_url
-    expect(single_item["created_at"]).to eq expected_item.created_at
-    expect(single_item["updated_at"]).to eq expected_item.updated_at
+    expect(single_item["created_at"]).to eq expected_item.created_at.to_s
+    expect(single_item["updated_at"]).to eq expected_item.updated_at.to_s
   end
 
   it "should return a single item" do
