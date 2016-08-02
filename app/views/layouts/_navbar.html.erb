@@ -20,5 +20,15 @@
         <a href="/orders">Orders</a>
       </li>
     </ul>
+
+    <%= form_tag search_index_path, class: "navbar-form navbar-left" do %>
+      <div class="form-group">
+        <%= label_tag(:zip, "Search for a store by zip:") %>
+        <%= text_field_tag(:zip, nil, class="form-control") %>
+        <%= submit_tag %>
+      </div>
+    <% end %>
+
+    </ul>
   </div>
 </nav>
